@@ -8,7 +8,7 @@ require (
 	github.com/gdamore/tcell/v2 v2.5.1
 	github.com/go-redis/redis/v8 v8.11.4
 	github.com/google/go-cmp v0.5.6
-	github.com/BIoodborne/asynq v0.0.2
+	github.com/BIoodborne/asynq v0.03
 
 	github.com/mattn/go-runewidth v0.0.13
 	github.com/mitchellh/go-homedir v1.1.0

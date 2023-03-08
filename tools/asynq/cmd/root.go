@@ -7,6 +7,8 @@ package cmd
 import (
 	"crypto/tls"
 	"fmt"
+	"github.com/BIoodborne/asynq/internal/base"
+	"github.com/BIoodborne/asynq/internal/rdb"
 	"io"
 	"os"
 	"strings"
@@ -15,8 +17,7 @@ import (
 	"unicode/utf8"
 
 	"github.com/BIoodborne/asynq"
-	"github.com/BIoodborne/asynq/internal/base"
-	"github.com/BIoodborne/asynq/internal/rdb"
+
 	"github.com/MakeNowJust/heredoc/v2"
 	"github.com/fatih/color"
 	"github.com/go-redis/redis/v8"

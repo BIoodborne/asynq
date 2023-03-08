@@ -3,11 +3,12 @@ package main
 import (
 	"flag"
 	"fmt"
+	"github.com/BIoodborne/asynq/x/metrics"
 	"log"
 	"net/http"
 
 	"github.com/BIoodborne/asynq"
-	"github.com/BIoodborne/asynq/x/metrics"
+
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/collectors"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
