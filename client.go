@@ -36,6 +36,15 @@ func NewClient(r RedisConnOpt) *Client {
 	return &Client{broker: rdb.NewRDB(c)}
 }
 
+// NewClient by RDS.Client
+func NewClientByRDS(rcli interface{}) *Client {
+	c, ok := rcli.(redis.UniversalClient)
+	if !ok {
+		panic(fmt.Sprintf("asynq: unsupported RedisConnOpt type %v", rcli))
+	}
+	return &Client{broker: rdb.NewRDB(c)}
+}
+
 type OptionType int
 
 const (
@@ -150,9 +159,9 @@ func (t deadlineOption) Value() interface{} { return time.Time(t) }
 // TTL duration must be greater than or equal to 1 second.
 //
 // Uniqueness of a task is based on the following properties:
-//     - Task Type
-//     - Task Payload
-//     - Queue Name
+//   - Task Type
+//   - Task Payload
+//   - Queue Name
 func Unique(ttl time.Duration) Option {
 	return uniqueOption(ttl)
 }
