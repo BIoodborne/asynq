@@ -10,11 +10,11 @@ import (
 	"strings"
 	"time"
 
+	"github.com/BIoodborne/asynq/internal/base"
+	"github.com/BIoodborne/asynq/internal/errors"
+	"github.com/BIoodborne/asynq/internal/rdb"
 	"github.com/go-redis/redis/v8"
 	"github.com/google/uuid"
-	"github.com/hibiken/asynq/internal/base"
-	"github.com/hibiken/asynq/internal/errors"
-	"github.com/hibiken/asynq/internal/rdb"
 )
 
 // A Client is responsible for scheduling tasks.

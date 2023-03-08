@@ -10,10 +10,10 @@ import (
 	"strings"
 	"time"
 
+	"github.com/BIoodborne/asynq/internal/base"
+	"github.com/BIoodborne/asynq/internal/errors"
+	"github.com/BIoodborne/asynq/internal/rdb"
 	"github.com/go-redis/redis/v8"
-	"github.com/hibiken/asynq/internal/base"
-	"github.com/hibiken/asynq/internal/errors"
-	"github.com/hibiken/asynq/internal/rdb"
 )
 
 // Inspector is a client interface to inspect and mutate the state of

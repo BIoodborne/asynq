@@ -8,6 +8,9 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"github.com/BIoodborne/asynq/internal/base"
+	"github.com/BIoodborne/asynq/internal/log"
+	"github.com/BIoodborne/asynq/internal/rdb"
 	"math"
 	"math/rand"
 	"runtime"
@@ -16,9 +19,6 @@ import (
 	"time"
 
 	"github.com/go-redis/redis/v8"
-	"github.com/hibiken/asynq/internal/base"
-	"github.com/hibiken/asynq/internal/log"
-	"github.com/hibiken/asynq/internal/rdb"
 )
 
 // Server is responsible for task processing and task lifecycle management.

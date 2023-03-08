@@ -11,8 +11,8 @@ import (
 	"sort"
 	"time"
 
+	"github.com/BIoodborne/asynq"
 	"github.com/MakeNowJust/heredoc/v2"
-	"github.com/hibiken/asynq"
 	"github.com/spf13/cobra"
 )
 

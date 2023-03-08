@@ -12,14 +12,14 @@ import (
 	"testing"
 	"time"
 
+	"github.com/BIoodborne/asynq/internal/base"
+	"github.com/BIoodborne/asynq/internal/rdb"
+	h "github.com/BIoodborne/asynq/internal/testutil"
+	"github.com/BIoodborne/asynq/internal/timeutil"
 	"github.com/go-redis/redis/v8"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"github.com/google/uuid"
-	"github.com/hibiken/asynq/internal/base"
-	"github.com/hibiken/asynq/internal/rdb"
-	h "github.com/hibiken/asynq/internal/testutil"
-	"github.com/hibiken/asynq/internal/timeutil"
 )
 
 func TestInspectorQueues(t *testing.T) {
@@ -955,7 +955,7 @@ func TestInspectorListRetryTasks(t *testing.T) {
 			qname: "default",
 			want:  []*TaskInfo(nil),
 		},
-		// TODO(hibiken): ErrQueueNotFound when queue doesn't exist
+		// TODO(BIoodborne): ErrQueueNotFound when queue doesn't exist
 	}
 
 	for _, tc := range tests {
