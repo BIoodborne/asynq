@@ -550,6 +550,7 @@ func NewServer(r RedisConnOpt, cfg Config) *Server {
 	}
 }
 
+// For RDS.client input as r
 func NewServerByRDS(r interface{}, cfg Config) *Server {
 	c, ok := r.(redis.UniversalClient)
 	if !ok {
